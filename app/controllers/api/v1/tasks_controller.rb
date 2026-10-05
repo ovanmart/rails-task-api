@@ -28,10 +28,10 @@ class Api::V1::TasksController < ApplicationController
 
     head :no_content
   end
-  
+
   private
 
   def task_params
     params.permit(:title, :description, :completed)
   end
-end    
+end

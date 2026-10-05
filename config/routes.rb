@@ -5,9 +5,9 @@ Rails.application.routes.draw do
   # Can be used by load balancers and uptime monitors to verify that the app is live.
   namespace :api do
     namespace :v1 do
-      resources :users, only: [:create]
+      resources :users, only: [ :create ]
       post "login", to: "auth#login"
-      resources :tasks, only: [:create, :index, :update, :destroy]
+      resources :tasks, only: [ :create, :index, :update, :destroy ]
   end
 end
   get "up" => "rails/health#show", as: :rails_health_check
