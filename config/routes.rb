@@ -7,6 +7,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :users, only: [:create]
       post "login", to: "auth#login"
+      resources :tasks, only: [:create]
   end
 end
   get "up" => "rails/health#show", as: :rails_health_check
